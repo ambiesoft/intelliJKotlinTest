@@ -1,0 +1,116 @@
+
+
+class GreetingRepositoryMock : GreetingRepositoryInterface {
+    override fun greet(): String {
+        return "Hello from Mock"
+    }
+}
+class GreetingRepository : GreetingRepositoryInterface {
+    override fun greet(): String {
+        return "Hello from Repository"
+    }
+}
+
+interface GreetingRepositoryInterface {
+    fun greet(): String
+}
+
+class GreetingViewModel(private val greetingRepository: GreetingRepositoryInterface) {
+    fun greet(): String {
+        return this.greetingRepository.greet()
+    }
+}
+
+fun diTest() {
+    val viewModel = GreetingViewModel(greetingRepository = GreetingRepositoryMock())
+    print(viewModel.greet())
+}
+
+fun nazo() {
+    println("Hello World!")
+
+    data class Question(
+        val text: String,
+        val answers: List<String>)
+
+    // The first answer is the correct one.  We randomize the answers before showing the text.
+    // All questions must have four answers.  We'd want these to contain references to string
+    // resources, so we could internationalize. (Or better yet, don't define the questions in code...)
+    val questions: MutableList<Question> = mutableListOf(
+        Question(text = "What is Android Jetpack?",
+            answers = listOf("All of these", "Tools", "Documentation", "Libraries")),
+        Question(text = "What is the base class for layouts?",
+            answers = listOf("ViewGroup", "ViewSet", "ViewCollection", "ViewRoot")),
+        Question(text = "What layout do you use for complex screens?",
+            answers = listOf("ConstraintLayout", "GridLayout", "LinearLayout", "FrameLayout")),
+        Question(text = "What do you use to push structured data into a layout?",
+            answers = listOf("Data binding", "Data pushing", "Set text", "An OnClick method")),
+        Question(text = "What method do you use to inflate layouts in fragments?",
+            answers = listOf("onCreateView()", "onActivityCreated()", "onCreateLayout()", "onInflateLayout()")),
+        Question(text = "What's the build system for Android?",
+            answers = listOf("Gradle", "Graddle", "Grodle", "Groyle")),
+        Question(text = "Which class do you use to create a vector drawable?",
+            answers = listOf("VectorDrawable", "AndroidVectorDrawable", "DrawableVector", "AndroidVector")),
+        Question(text = "Which one of these is an Android navigation component?",
+            answers = listOf("NavController", "NavCentral", "NavMaster", "NavSwitcher")),
+        Question(text = "Which XML element lets you register an activity with the launcher activity?",
+            answers = listOf("intent-filter", "app-registry", "launcher-registry", "app-launcher")),
+        Question(text = "What do you use to mark a layout for data binding?",
+            answers = listOf("<layout>", "<binding>", "<data-binding>", "<dbinding>"))
+    )
+}
+
+
+
+
+fun isOdd(x: Int) = x % 2 != 0
+val x = 1
+
+fun scfun() {
+    run {
+        val str = "Hello"
+        // this
+        str.run {
+            println("The string's length: $length")
+            //println("The string's length: ${this.length}") // does the same
+        }
+        // it
+        str.let {
+            println("The string's length is ${it.length}")
+        }
+    }
+    run {
+        val strs = listOf("a", "bc", "def")
+        val m = strs.map(String::length)
+        println("str.map is ${m}")
+    }
+    run {
+        val a = isOdd(5)
+        println(a)
+    }
+
+    run {
+        val numbers = listOf(1, 2, 3)
+        println(numbers.filter(::isOdd))
+
+
+        // property reference
+        // ::x is KProperty<Int>
+        println(::x.get())
+        println(::x.name)
+    }
+}
+
+fun main(args: Array<String>) {
+    diTest()
+    nazo()
+    scfun()
+
+    println("Hello World!")
+
+    // Try adding program arguments via Run/Debug configuration.
+    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
+    println("Program arguments: ${args.joinToString()}")
+}
+
+
