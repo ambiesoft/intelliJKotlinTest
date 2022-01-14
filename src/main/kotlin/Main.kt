@@ -101,10 +101,18 @@ fun scfun() {
     }
 }
 
+
+
+
+
 fun main(args: Array<String>) {
     diTest()
     nazo()
     scfun()
+    imuu()
+    imuu2()
+    reifymain()
+    fold()
 
     println("Hello World!")
 
