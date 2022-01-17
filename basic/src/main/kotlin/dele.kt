@@ -12,7 +12,7 @@ var maxCount: Int by observable(initialValue = 0) { property, oldValue, newValue
     println("${property.name} is being changed from $oldValue to $newValue")
 }
 
-var age: Int by vetoable(initialValue = 0) { property, oldValue, newValue ->
+var age: Int by vetoable(initialValue = 0) { _, _, newValue ->
     newValue > 0
 }
 
