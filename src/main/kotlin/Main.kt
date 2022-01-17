@@ -58,6 +58,8 @@ fun nazo() {
         Question(text = "What do you use to mark a layout for data binding?",
             answers = listOf("<layout>", "<binding>", "<data-binding>", "<dbinding>"))
     )
+
+    println("Size of question = ${questions.size}");
 }
 
 
@@ -115,12 +117,15 @@ fun main(args: Array<String>) {
     fold()
     testCls();
     dele();
+    testPerson()
+    testPersonInfoProvider()
+    testHigher()
 
-    println("Hello World!")
-
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+//    println("Hello World!")
+//
+//    // Try adding program arguments via Run/Debug configuration.
+//    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
+//    println("Program arguments: ${args.joinToString()}")
 }
 
 
