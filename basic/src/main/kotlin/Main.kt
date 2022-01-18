@@ -7,8 +7,8 @@ fun main(args: Array<String>) {
     imuu2()
     reifymain()
     fold()
-    testCls();
-    dele();
+    testCls()
+    dele()
     testPerson()
     testPersonInfoProvider()
     testHigher()
