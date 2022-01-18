@@ -1,14 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
 fun main(args: Array<String>) {
     diTest()
     nazo()
