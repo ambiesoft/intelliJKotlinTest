@@ -5,7 +5,7 @@ plugins {
     application
 }
 
-group = "me.bajofew"
+group = "me.hkiurwvkj"
 version = "1.0-SNAPSHOT"
 
 repositories {
