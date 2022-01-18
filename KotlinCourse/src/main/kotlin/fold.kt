@@ -23,9 +23,11 @@ fun fold() {
         result
     })
 
-// Parameter types in a lambda are optional if they can be inferred:
+    // Parameter types in a lambda are optional if they can be inferred:
     val joinedToString = items.fold("Elements:", { acc, i -> acc + " " + i })
+    println(joinedToString)
 
-// Function references can also be used for higher-order function calls:
+    // Function references can also be used for higher-order function calls:
     val product = items.fold(1, Int::times)
+    println(product)
 }
