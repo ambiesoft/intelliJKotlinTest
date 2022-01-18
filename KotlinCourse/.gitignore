@@ -97,3 +97,9 @@ outTmp/
 /test.output
 /kotlin-native/dist
 kotlin-ide/
+.idea/codeStyles/
+.idea/vcs.xml
+gradle/
+gradlew
+gradlew.bat
+
