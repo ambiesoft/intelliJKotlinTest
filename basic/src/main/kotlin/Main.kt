@@ -12,7 +12,8 @@ fun main(args: Array<String>) {
     testPerson()
     testPersonInfoProvider()
     testHigher()
-
+    testEntity()
+    testObdec()
 //    println("Hello World!")
 //
     // Try adding program arguments via Run/Debug configuration.
