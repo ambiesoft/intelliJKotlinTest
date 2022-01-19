@@ -14,8 +14,11 @@ fun main(args: Array<String>) {
     testHigher()
     testEntity()
     testObdec()
-//    println("Hello World!")
-//
+    testDelePro()
+    testDataClass()
+
+    println("--------------------------------")
+
     // Try adding program arguments via Run/Debug configuration.
     // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
     println("Program arguments: ${args.joinToString()}")
