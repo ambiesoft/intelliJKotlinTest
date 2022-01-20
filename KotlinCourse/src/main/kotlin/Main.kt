@@ -16,7 +16,10 @@ fun main(args: Array<String>) {
     testObdec()
     testDelePro()
     testDataClass()
+    testLazyHolded()
 
+    println("--------------------------------")
+    testListItemUiModel()
     println("--------------------------------")
 
     // Try adding program arguments via Run/Debug configuration.
