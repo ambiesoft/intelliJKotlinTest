@@ -1,5 +1,7 @@
 
 fun main(args: Array<String>) {
+    println(KotlinVersion.CURRENT)
+
     diTest()
     nazo()
     scfun()
@@ -20,6 +22,14 @@ fun main(args: Array<String>) {
 
     println("--------------------------------")
     testListItemUiModel()
+    println("--------------------------------")
+
+    println("--------------------------------")
+    testinnernested()
+    println("--------------------------------")
+
+    println("--------------------------------")
+    testImplicitThis()
     println("--------------------------------")
 
     // Try adding program arguments via Run/Debug configuration.
